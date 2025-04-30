@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   title: string = "Kata Randomizer 2.0";
-  obkLogo: string = "../assets/obk_logo.jpg";
+  obkLogo: string = "assets/obk_logo.jpg";
 }
