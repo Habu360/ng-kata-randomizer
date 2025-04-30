@@ -1,0 +1,9 @@
+<h5>Quotes</h5>
+<div class="list-group-container">
+  <ul class="list-group">
+    <li class="quotes-container list-group-item" *ngFor="let item of quotes">
+        <span class="quote">{{ item.quote }}</span> <br />
+        <span class="quote-author">-- {{ item.author }}</span>
+    </li>    
+  </ul>
+</div>

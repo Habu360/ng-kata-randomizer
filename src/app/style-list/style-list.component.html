@@ -1,0 +1,9 @@
+<h5>{{ heading }}</h5>
+<div class="list-group-container">
+  <ul class="list-group">
+      <li class="list-group-item" *ngFor="let style of styles" (click)="setSelectedStyle(style.id)"
+        [ngClass]="{'selected-item': style.id == selectedStyle}">
+        {{ style.name }}
+      </li>
+  </ul>
+</div>

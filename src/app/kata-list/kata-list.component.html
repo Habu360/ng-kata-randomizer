@@ -1,0 +1,24 @@
+<h5>{{ heading }}</h5>
+<div class="button-container">
+    <div class="left">
+        <button class="btn btn-primary" routerLink="/home" routerLinkActive="active">Change Styles</button>
+        <button class="btn btn-success" (click)="randomize()">Randomize</button>
+    </div>
+</div>
+<div class="button-container" [ngClass]="{'hidden': shouldHideFilters() }">
+    <div class="left">
+        <h6>Filters:</h6>
+        <button class="btn btn-primary" (click)="setSelectedCategory('long')">Longs</button>
+        <button class="btn btn-primary" (click)="setSelectedCategory('short')">Shorts</button>
+        <button class="btn btn-primary" (click)="setSelectedCategory('')">All</button>
+    </div>
+</div>
+<div class="list-group-container">
+    <div class="action">{{ selectedAction }}</div>
+    <ul class="list-group">
+     <li class="list-group-item" *ngFor="let kata of getFilteredKatas()"
+        [ngClass]="{'selected-item': kata.id == selectedKataId}">
+        {{ kata.name }}
+      </li>
+    </ul>
+</div>
